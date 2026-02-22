@@ -9,14 +9,14 @@
         <h1>A collection of projects gathered in a blog</h1>
     </header>
 
+   {% for post in posts %}
     <article>
-        <h2>Predition model using sickit-learn</h2>
-        <p>A machine learning model using gradient boosting to predict the outcome of the 2025 Singapore F1 Grand Prix.</p>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </article>
+{% endfor %}
 
-     <article>
-        <h2>Pacman game</h2>
-        <p>A BFS and DFS algorithm developed to find path in a maze similar to pacman.</p>
-    </article>
+
 </body>
 </html>
